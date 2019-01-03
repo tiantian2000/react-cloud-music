@@ -1,0 +1,94 @@
+.rank-info {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  bottom:0;
+  overflow:hidden;
+  background-color: #fff;
+
+  .hd {
+    position: relative;
+    width: 100%;
+    height: 12.5rem;
+    overflow: hidden;
+    img{
+      margin-top: -100px;
+    }
+    .rank-info-time {
+      width: 100%;
+      height: 2.8rem;
+      background: linear-gradient(bottom,rgba(0,0,0,.6),transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      span{
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.07143rem;
+        color: #fafff2;
+        font-size: 1rem;
+      }
+    }
+    .top {
+      width: 100%;
+      height: 2.8rem;
+      background: -webkit-linear-gradient(top,rgba(0,0,0,.4),transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      .back{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);    /* 50%为自身尺寸的一半 */
+      }
+      span{
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+        color: #fff;
+        font-size: 1.14rem;
+      }
+    }
+
+  }
+
+
+
+  .info-list {
+    .am-list-extra {
+      flex-basis: initial;
+    }
+    .am-list-item {
+      color: #333;
+      min-height: 73px;
+      .am-list-content {
+        font-size: 1.1rem;
+      }
+    }
+    .panel-songs-item-num {
+      margin-right: 5px;
+      padding: 0 .5rem;
+      font-size: .7143rem;
+      color: #999;
+      border-radius: 0.8rem;;
+    }
+    .one {
+      background: #e80000;
+      color: #fff;
+    }
+
+    .two {
+      background: #ff7200;
+      color: #fff;
+    }
+
+    .three {
+      background: #f8b300;
+      color: #fff;
+    }
+
+  }
+
+}

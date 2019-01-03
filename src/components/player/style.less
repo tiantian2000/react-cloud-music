@@ -1,0 +1,255 @@
+.player {
+  .normal {
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:150;
+    background: #222;
+    color: #fff;
+    .background {
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      z-index:-1;
+      opacity:0.5;
+      filter:blur(20px);
+    }
+    .top {
+      width: 100%;
+      line-height: 3rem;
+      padding: 0 2.1429rem;
+      text-align: center;
+      color: #fff;
+      box-sizing: border-box;
+      .back{
+        width: 2.1429rem;
+        height: 2.8031rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        cursor: pointer;
+        .am-icon-lg {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      .title{
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+    }
+    .header {
+      .cover {
+        width: 200px;
+        height: 20%;
+        margin: 20px auto;
+        img {
+          width: 180px;
+          height: 180px;
+          border:10px solid rgb(243, 244, 246);
+          border-radius: 50%;
+        }
+      }
+    }
+    .clric {
+      position:fixed;
+      left:0;
+      right:0;
+      top:280px;
+      height:190px;
+      overflow:hidden;
+      font-size: 14px;
+      .b-wrapper{
+        background-color: transparent;
+      }
+      .active {
+        color: #31c27c
+      }
+      .list-group-item {
+        list-style: none;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    .control {
+      position: fixed;
+      width:65%;
+      margin: auto;
+      left:0; right:0;
+      bottom: 20px;
+      text-align: center;
+    }
+
+    .play-progress{
+      .start-time{
+        position: absolute;
+        top: -5px;
+        left:-17%;
+        color: #dcdcdc;
+        font-size: 14px;
+      }
+      .end-time{
+        position: absolute;
+        top: -5px;
+        left:103%;
+        color: #dcdcdc;
+        font-size: 14px;
+      }
+    }
+
+    .play-controller {
+      margin-top: 30px;
+      list-style: none;
+      li {
+        display: inline-block;
+        float: left;
+        width:25%;
+      }
+    }
+  }
+
+  .mini-player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 75.19px;
+    background: #333;
+    color: #fff;
+    overflow: hidden;
+
+    .song {
+      display: flex;                /*设置为flex布局*/
+
+      .song > div{
+        flex: none;
+      }
+
+      .icon-song {
+        padding: 5px 20px 0 5px;
+        img {
+          width: 65.5px;
+          height: 65.5px;
+          border-radius: 50%;
+        }
+      }
+
+      .song_detail {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        .name {
+          margin-bottom: 2px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          font-size: .8571rem;
+        }
+        .desc {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          font-size: .7143rem;
+          color: #888;
+        }
+      }
+      .control {
+        margin-top: 25px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .time{
+          padding-right: 5px;
+        }
+        .control_play{
+          width: 1.786rem;
+          height: 1.786rem;
+          display: inline-block;
+          vertical-align: middle;
+          cursor: pointer;
+          background-image: url('./images/play_icon.png');
+          background-size: 100%;
+        }
+
+        .control_pause {
+          width: 1.786rem;
+          height: 1.786rem;
+          display: inline-block;
+          vertical-align: middle;
+          cursor: pointer;
+          background: url('./images/pause_icon.png') no-repeat;
+          background-size: 100%;
+        }
+
+      }
+    }
+
+  }
+
+  .play {
+    animation:rotate 20s linear infinite;
+  }
+  .pause{
+    animation-play-state: paused;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg) }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  /*图标*/
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(images/icons.png) no-repeat;
+    background-size: 16px auto;
+  }
+  .icon.prev {
+    background-position: 0 0;
+  }
+  .icon.next {
+    width: 16px;
+    height: 16px;
+    background-position: 0 -16px;
+  }
+  .icon.pause {
+    background-position: 0 -32px;
+  }
+  .icon.play-state {
+    background-position: 0 -48px;
+  }
+  .icon.repeat-once {
+    background-position: 0 -64px;
+  }
+  .icon.repeat-cycle {
+    background-position: 0 -96px;
+  }
+  .icon.repeat-random {
+    background-position: 0 -192px;
+  }
+  .icon-volume {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(images/icons.png) no-repeat;
+    background-size: 16px auto;
+    background-position: 0 -112px;
+  }
+
+}

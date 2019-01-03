@@ -1,0 +1,57 @@
+.sheet-info {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #fff;
+
+  .hd {
+    position: relative;
+    width: 100%;
+    height: 12.5rem;
+    overflow: hidden;
+    img{
+      margin-top: -100px;
+    }
+
+    .top {
+      width: 100%;
+      height: 2.8rem;
+      background: -webkit-linear-gradient(top,rgba(0,0,0,.4),transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      .back{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);    /* 50%为自身尺寸的一半 */
+      }
+      span{
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        font-size: 1.15rem;
+      }
+    }
+
+  }
+
+  .info-list {
+    .am-list-extra {
+      flex-basis: initial;
+    }
+    .am-list-item {
+      color: #333;
+      min-height: 73px;
+      .am-list-content {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
